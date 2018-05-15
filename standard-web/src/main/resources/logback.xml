@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Logback Configuration. -->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <property name="log.dir" value="//Users/user/Desktop/logs/intellij_standard" />
+
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d [%thread] %-5p [%c] [%F:%L] - %msg%n
+            </pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!-- mybatis输出 -->
+    <appender name="MYBATIS_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/mybatis.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8"> <!-- encoder 可以指定字符集，对于中文输出有意义 -->
+            <pattern>%d [%thread] %-5p [%c] [%F:%L] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="INFO"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.dir}/info.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/info.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d [%thread] %-5p [%c] [%F:%L] - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="ERROR"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.dir}/error.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/error.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d [%thread] %-5p [%c] [%F:%L] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.apache.ibatis" additivity="false">
+        <!--<appender-ref ref="STDOUT"/>-->
+        <appender-ref ref="MYBATIS_FILE"/>
+        <appender-ref ref="INFO"/>
+    </logger>
+    <logger name="org.springframework" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="INFO"/>
+    </logger>
+    <logger name="top.snoweagle" additivity="false">
+        <!--<appender-ref ref="STDOUT"/>-->
+        <appender-ref ref="INFO"/>
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+        <!--<appender-ref ref="INFO"/>-->
+    </root>
+
+</configuration>
