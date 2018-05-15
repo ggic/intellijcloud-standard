@@ -34,10 +34,6 @@
             <artifactId>standard-app</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.intellijcloud.standard</groupId>
-            <artifactId>standard-domain</artifactId>
-        </dependency>
-        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
         </dependency>
@@ -75,6 +71,7 @@
             <artifactId>jstl-impl</artifactId>
             <version>1.2</version>
         </dependency>
+
     </dependencies>
     <build>
         <finalName>standard-web</finalName>

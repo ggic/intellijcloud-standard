@@ -36,7 +36,7 @@
             </dependency>
             <dependency>
                 <groupId>com.intellijcloud.standard</groupId>
-                <artifactId>standard-domain</artifactId>
+                <artifactId>standard-api</artifactId>
                 <version>${standard.module.version}</version>
             </dependency>
             <dependency>
@@ -210,9 +210,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.9.9</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -242,8 +242,8 @@
     </build>
 
     <modules>
+        <module>standard-api</module>
         <module>standard-app</module>
-        <module>standard-domain</module>
         <module>standard-infrastruc</module>
         <module>standard-web</module>
     </modules>

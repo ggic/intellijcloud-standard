@@ -8,7 +8,6 @@
 
 	<!-- auto register Processor -->
 	<context:component-scan base-package="com.intellijcloud.standard.app" />
-	<import resource="classpath:spring/spring-domain.xml" />
 
-
+	<import resource="spring-infrastructure.xml"/>
 </beans>

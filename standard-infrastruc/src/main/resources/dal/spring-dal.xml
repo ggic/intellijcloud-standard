@@ -23,12 +23,17 @@
     <!-- mapper scanner configurer -->
     <bean id="mappers" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage"
-                  value="com.intellijcloud.standard.infrastruc.dal.mapper"/>
+                  value="com.intellijcloud.standard.infrastruc.dal.mapper;com.intellijcloud.standard.infrastruc.dal.mapperExt"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="mapperLocations" value="classpath:dal/mapper/*.xml,dal/mapperExt/*.xml"/>
+        <property name="mapperLocations">
+            <list>
+                <value>classpath:dal/mapper/*.xml</value>
+                <value>classpath:dal/mapperExt/*.xml</value>
+            </list>
+        </property>
         <property name="dataSource" ref="dataSource" />
     </bean>
 

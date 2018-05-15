@@ -13,7 +13,7 @@
         </encoder>
     </appender>
     <!-- mybatis输出 -->
-    <appender name="MYBATIS_FILE"
+    <appender name="MYBATIS_LOGS"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log.dir}/mybatis.%d{yyyy-MM-dd}.log
@@ -25,9 +25,9 @@
         </encoder>
     </appender>
 
-    <appender name="INFO"
+    <appender name="ALL_LOGS"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.dir}/info.log</file>
+        <file>${log.dir}/all.log</file>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>INFO</level>
         </filter>
@@ -40,7 +40,7 @@
             <pattern>%d [%thread] %-5p [%c] [%F:%L] - %msg%n</pattern>
         </encoder>
     </appender>
-    <appender name="ERROR"
+    <appender name="ERROR_LOGS"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${log.dir}/error.log</file>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
@@ -58,20 +58,18 @@
 
     <logger name="org.apache.ibatis" additivity="false">
         <!--<appender-ref ref="STDOUT"/>-->
-        <appender-ref ref="MYBATIS_FILE"/>
-        <appender-ref ref="INFO"/>
+        <appender-ref ref="MYBATIS_LOGS"/>
+        <appender-ref ref="ALL_LOGS"/>
     </logger>
     <logger name="org.springframework" additivity="false">
         <appender-ref ref="STDOUT"/>
-        <appender-ref ref="INFO"/>
     </logger>
-    <logger name="top.snoweagle" additivity="false">
-        <!--<appender-ref ref="STDOUT"/>-->
-        <appender-ref ref="INFO"/>
+    <logger name="com.intellijcloud" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ALL_LOGS"/>
     </logger>
 
-    <root level="debug">
-        <appender-ref ref="STDOUT"/>
+    <root level="info">
         <!--<appender-ref ref="INFO"/>-->
     </root>
 

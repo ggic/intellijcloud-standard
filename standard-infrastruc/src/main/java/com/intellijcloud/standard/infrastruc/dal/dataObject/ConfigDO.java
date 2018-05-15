@@ -5,13 +5,13 @@ import java.util.Date;
 public class ConfigDO {
     private Long id;
 
-    private String type;
+    private String configType;
 
     private String keyName;
 
-    private String value;
+    private String configValue;
 
-    private String desc;
+    private String configDesc;
 
     private String ext1;
 
@@ -33,12 +33,12 @@ public class ConfigDO {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getConfigType() {
+        return configType;
     }
 
-    public void setType(String type) {
-        this.type = type == null ? null : type.trim();
+    public void setConfigType(String configType) {
+        this.configType = configType == null ? null : configType.trim();
     }
 
     public String getKeyName() {
@@ -49,20 +49,20 @@ public class ConfigDO {
         this.keyName = keyName == null ? null : keyName.trim();
     }
 
-    public String getValue() {
-        return value;
+    public String getConfigValue() {
+        return configValue;
     }
 
-    public void setValue(String value) {
-        this.value = value == null ? null : value.trim();
+    public void setConfigValue(String configValue) {
+        this.configValue = configValue == null ? null : configValue.trim();
     }
 
-    public String getDesc() {
-        return desc;
+    public String getConfigDesc() {
+        return configDesc;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
+    public void setConfigDesc(String configDesc) {
+        this.configDesc = configDesc == null ? null : configDesc.trim();
     }
 
     public String getExt1() {
