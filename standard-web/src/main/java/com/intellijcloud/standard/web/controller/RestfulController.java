@@ -2,7 +2,6 @@ package com.intellijcloud.standard.web.controller;
 
 
 import com.intellijcloud.standard.infrastruc.utils.LogWorker;
-import com.intellijcloud.standard.web.dto.ResultDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 public class RestfulController {
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ResultDTO index()  {
         LogWorker.log(log,"健康检查","");

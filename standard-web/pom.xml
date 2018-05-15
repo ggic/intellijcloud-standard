@@ -31,6 +31,10 @@
         </dependency>
         <dependency>
             <groupId>com.intellijcloud.standard</groupId>
+            <artifactId>standard-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.intellijcloud.standard</groupId>
             <artifactId>standard-app</artifactId>
         </dependency>
         <dependency>

@@ -10,6 +10,6 @@ import java.util.List;
  */
 @Data
 public class AppRequest implements Serializable{
-    private String name;
+    private String id;
 
 }

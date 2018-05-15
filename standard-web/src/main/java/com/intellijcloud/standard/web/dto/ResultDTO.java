@@ -36,6 +36,11 @@ public class ResultDTO implements Serializable {
         restfulDTO.setMessage(message);
         return restfulDTO;
     }
+    public ResultDTO isSuccess(){
+        setStatus(Status.S.name());
+        setMessage(Status.S.desc);
+        return this;
+    }
     private enum Status{
         S("成功"),F("失败"),U("未知");
         private String desc;
