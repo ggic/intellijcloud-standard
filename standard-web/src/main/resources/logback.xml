@@ -61,7 +61,7 @@
         <appender-ref ref="MYBATIS_LOGS"/>
         <appender-ref ref="ALL_LOGS"/>
     </logger>
-    <logger name="org.springframework" additivity="false">
+    <logger name="org.springframework" additivity="false" level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </logger>
     <logger name="com.intellijcloud" additivity="false">

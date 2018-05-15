@@ -1,4 +1,4 @@
-package com.intellijcloud.standard.api.dto;
+package com.intellijcloud.standard.api.dto.response;
 
 import lombok.Data;
 
