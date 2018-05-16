@@ -10,4 +10,6 @@
 	<context:component-scan base-package="com.intellijcloud.standard.app" />
 
 	<import resource="spring-infrastructure.xml"/>
+	<import resource="spring-dubbo-provider.xml"/>
+	<import resource="spring-dubbo-consumer.xml"/>
 </beans>

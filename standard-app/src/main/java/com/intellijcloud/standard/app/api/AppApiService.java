@@ -1,4 +1,4 @@
-package com.intellijcloud.standard.app.service;
+package com.intellijcloud.standard.app.api;
 
 import com.intellijcloud.standard.api.AppApi;
 import com.intellijcloud.standard.api.dto.response.BaseResp;
@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  */
 @Service
 @Slf4j
-public class AppService implements AppApi {
+public class AppApiService implements AppApi {
     @Resource
     ConfigDOMapperExt configDOMapperExt;
     @Override
