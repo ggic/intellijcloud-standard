@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  */
 @Service
 @Slf4j
-public class AppApiService implements AppApi {
+public class AppApiImpl implements AppApi {
     @Resource
     ConfigDOMapperExt configDOMapperExt;
     @Override

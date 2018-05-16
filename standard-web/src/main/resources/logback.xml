@@ -44,7 +44,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${log.dir}/error.log</file>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>WARN</level>
+            <level>ERROR</level>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${log.dir}/error.%d{yyyy-MM-dd}.log
@@ -60,13 +60,16 @@
         <!--<appender-ref ref="STDOUT"/>-->
         <appender-ref ref="MYBATIS_LOGS"/>
         <appender-ref ref="ALL_LOGS"/>
+        <appender-ref ref="ERROR_LOGS"/>
     </logger>
     <logger name="org.springframework" additivity="false" level="DEBUG">
         <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ERROR_LOGS"/>
     </logger>
     <logger name="com.intellijcloud" additivity="false">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="ALL_LOGS"/>
+        <appender-ref ref="ERROR_LOGS"/>
     </logger>
 
     <root level="info">
