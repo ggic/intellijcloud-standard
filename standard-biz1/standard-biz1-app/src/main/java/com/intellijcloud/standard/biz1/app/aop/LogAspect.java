@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
@@ -12,6 +13,7 @@ import java.util.Arrays;
  * @author patrick
  */
 @Aspect
+@Component
 @Slf4j
 public class LogAspect {
     @Pointcut("execution(* com.intellijcloud.standard.biz1.app.service.*.*(..))")

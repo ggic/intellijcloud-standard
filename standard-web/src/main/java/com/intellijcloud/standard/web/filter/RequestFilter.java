@@ -2,6 +2,7 @@ package com.intellijcloud.standard.web.filter;
 
 import com.intellijcloud.standard.common.utils.LogWorker;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -12,6 +13,7 @@ import java.io.IOException;
  * Created by Patrick on 2018/5/15.
  */
 @Slf4j
+@Component
 @WebFilter(filterName = "RequestFilter", urlPatterns = "/*")
 public class RequestFilter implements Filter {
     @Override
