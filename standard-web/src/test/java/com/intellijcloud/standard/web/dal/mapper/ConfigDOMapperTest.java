@@ -1,8 +1,8 @@
-package com.intellijcloud.standard.common.dal.mapper;
+package com.intellijcloud.standard.web.dal.mapper;
 
 import com.intellijcloud.standard.biz1.app.dal.dataObject.ConfigDO;
 import com.intellijcloud.standard.biz1.app.dal.mapperExt.ConfigDOMapperExt;
-import com.intellijcloud.standard.common.TST;
+import com.intellijcloud.standard.web.TST;
 import com.intellijcloud.standard.common.utils.LogWorker;
 import com.intellijcloud.standard.common.utils.StringHelper;
 import lombok.extern.slf4j.Slf4j;

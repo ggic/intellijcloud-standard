@@ -1,6 +1,8 @@
-package com.intellijcloud.standard.common.redis;
+package com.intellijcloud.standard.web.redis;
 
-import com.intellijcloud.standard.common.TST;
+import com.intellijcloud.standard.web.TST;
+import com.intellijcloud.standard.common.utils.LogWorker;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.data.redis.core.RedisTemplate;
 
@@ -10,6 +12,7 @@ import javax.annotation.Resource;
  * @author pw
  * @date 2017-1-9
  */
+@Slf4j
 public class RedisTest extends TST {
     @Resource
     RedisTemplate<String, Object> redisTemplate;
@@ -26,13 +29,8 @@ public class RedisTest extends TST {
         Object o1 = redisTemplate.opsForList().leftPop("list");
         Object o2 = redisTemplate.opsForList().rightPop("list");
         Object o3 = redisTemplate.opsForList().range("list",0,4);
-        System.out.println(o1) ;
-        System.out.println(o2) ;
-        System.out.println(o3) ;
-
-
-
-
-
+        LogWorker.log(log,"o1",":{}",o1);
+        LogWorker.log(log,"o2",":{}",o2);
+        LogWorker.log(log,"o3",":{}",o3);
     }
 }

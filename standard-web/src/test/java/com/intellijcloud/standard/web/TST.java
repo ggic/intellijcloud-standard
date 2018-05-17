@@ -1,4 +1,4 @@
-package com.intellijcloud.standard.common;
+package com.intellijcloud.standard.web;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
