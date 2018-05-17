@@ -1,4 +1,5 @@
 # intellijcloud-standard
+springboot simple startup project
 
 muti-module:
 standar-parent
