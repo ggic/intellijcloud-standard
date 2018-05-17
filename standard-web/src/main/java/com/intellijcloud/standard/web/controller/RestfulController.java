@@ -1,8 +1,7 @@
 package com.intellijcloud.standard.web.controller;
 
 
-import com.intellijcloud.standard.infrastruc.utils.LogWorker;
-import com.intellijcloud.standard.web.dto.ResultDTO;
+import com.intellijcloud.standard.common.utils.LogWorker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

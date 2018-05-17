@@ -27,15 +27,18 @@
         <!-- modules-->
         <dependency>
             <groupId>com.intellijcloud.standard</groupId>
-            <artifactId>standard-infrastruc</artifactId>
+            <artifactId>standard-biz1-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.intellijcloud.standard</groupId>
-            <artifactId>standard-api</artifactId>
+            <artifactId>standard-biz1-app</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.intellijcloud.standard</groupId>
-            <artifactId>standard-app</artifactId>
+            <artifactId>standard-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>

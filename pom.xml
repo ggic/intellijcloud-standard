@@ -30,27 +30,6 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.intellijcloud.standard</groupId>
-                <artifactId>standard-infrastruc</artifactId>
-                <version>${standard.module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.intellijcloud.standard</groupId>
-                <artifactId>standard-api</artifactId>
-                <version>${standard.module.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.intellijcloud.standard</groupId>
-                <artifactId>standard-app</artifactId>
-                <version>${standard.module.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.intellijcloud.standard</groupId>
-                <artifactId>standard-web</artifactId>
-                <version>${standard.module.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>${servlet.api.version}</version>
@@ -223,7 +202,7 @@
     </dependencies>
 
     <build>
-        <finalName>standard-web</finalName>
+        <finalName>standard-parent</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -247,9 +226,8 @@
     </build>
 
     <modules>
-        <module>standard-api</module>
-        <module>standard-app</module>
-        <module>standard-infrastruc</module>
+        <module>standard-biz1</module>
+        <module>standard-common</module>
         <module>standard-web</module>
     </modules>
 
